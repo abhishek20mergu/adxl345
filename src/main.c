@@ -63,6 +63,7 @@ main(int argc, char* argv[])
 	uint8_t msg  = 0x00;
 	uint8_t addr = 0x00;
 
+	
 	GPIO_TypeDef *pc   = GPIOC;
 	GPIO_TypeDef *pb   = GPIOB;
 	SPI_TypeDef  *spi2 = SPI2;
