@@ -62,7 +62,6 @@ main(int argc, char* argv[])
 {
 	uint8_t msg  = 0x00;
 	uint8_t addr = 0x00;
-
 	
 	GPIO_TypeDef *pc   = GPIOC;
 	GPIO_TypeDef *pb   = GPIOB;
@@ -142,7 +141,6 @@ void spi_transfer_w(uint8_t addr,uint8_t data,int n)
 	spi2->DR = data;
 
 	while(getbit(spi2->SR,7));
-
 
 	for(i=0;i<n;i++)
 	{
