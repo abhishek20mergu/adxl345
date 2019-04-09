@@ -62,6 +62,8 @@ main(int argc, char* argv[])
 {
 	uint8_t msg  = 0x00;
 	uint8_t addr = 0x00;
+
+	trace_printf("Im in %s function\n",__func__);
 	
 	GPIO_TypeDef *pc   = GPIOC;
 	GPIO_TypeDef *pb   = GPIOB;
@@ -101,6 +103,8 @@ uint8_t spi_transfer_r(uint8_t addr,int n)
 {
 	int i;
 
+	trace_printf("Im in %s function\n",__func__);
+
 	GPIO_TypeDef *pc   =  GPIOC;
 	SPI_TypeDef  *spi2 =  SPI2;
 
@@ -128,6 +132,8 @@ uint8_t spi_transfer_r(uint8_t addr,int n)
 void spi_transfer_w(uint8_t addr,uint8_t data,int n)
 {
 	int i;
+
+	trace_printf("Im in %s function\n",__func__);
 
 	GPIO_TypeDef *pc   =  GPIOC;
 	SPI_TypeDef  *spi2 =  SPI2;
